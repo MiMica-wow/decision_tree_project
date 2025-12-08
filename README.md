@@ -1,51 +1,43 @@
-# Decision Tree Model — Macroeconomic & Housing Market Indicators
+# Mini Decision Tree Primer — Basic Classification Logic
 
-Ovaj projekat prikazuje izgradnju **Decision Tree modela** korišćenjem makroekonomskih i finansijskih indikatora koji utiču na tržište nekretnina.  
-Model i analiza su urađeni u Python-u, u Jupyter Notebook okruženju.
-
-## 📌 Cilj projekta
-
-- Demonstrirati primenu Decision Tree modela na realnim ekonomskim podacima  
-- Ilustrovati proces pripreme podataka (čišćenje, transformacija, konverzije tipova)  
-- Podeliti podatke na trening i test skup  
-- Trenirati Decision Tree model i vizualizovati rezultate  
-- Prikazati *feature importance* — koji indikatori najviše utiču na target promenljivu  
-
-Ovaj projekat predstavlja osnovu za šire mašinsko učenje u oblasti finansijske stabilnosti i kvantitativne analize.
+Ovaj mini projekat prikazuje kako funkcioniše **Decision Tree classifier** na malom, ručno definisanom datasetu iz oblasti makroprudencijalne analize.  
+Cilj je da se jasno razume *kako drvo bira splitove*, *šta je Gini impurity*, i *kako nastaje putanja odluke*.
 
 ---
 
-## 📊 Sadržaj notebook-a
+## 🎯 Cilj projekta
 
-Notebook `decision_tree.ipynb` uključuje:
+- Razumeti osnovnu logiku stabala odlučivanja (Decision Tree)
+- Pratiti kako model bira najbolje pitanje (split)
+- Videti kako se računa Gini impurity
+- Naučiti interpretaciju grana i listova
+- Primeniti sve to na malom, jednostavnom datasetu pre prelaska na veće i realne podatke
 
-1. **Učitavanje podataka iz CSV fajla**
-2. **Čišćenje podataka**
-   - zamena nedostajućih vrednosti  
-   - konverzija string vrednosti u numeričke  
-3. **Analiza deskriptivnih statistika**
-4. **Train-test split (npr. 95% / 5%)**
-5. **Trening Decision Tree modela**  
-   Parametri poput:
-   - `max_depth`
-   - `min_samples_leaf`
-   - `random_state`
-6. **Vizualizacija stabla i grafa strukture**
-7. **Feature Importance**
-8. **Tumačenje rezultata**
+Ovaj primer služi kao **intuitivni uvod** pre rada sa pravim makro-ekonomskim podacima.
 
 ---
 
-## 🛠 Tehnologije i biblioteke
+## 🧠 Šta se uči na ovom primeru?
 
-Projekat koristi:
+- Kako Decision Tree razdvaja podatke po pitanjima (`feature > threshold`)
+- Kako funkcioniše Gini impurity:  
+  - čisto čvor → Gini = 0  
+  - mešan čvor → Gini se povećava  
+- Kako drvo bira *najkorisnije prvo pitanje*
+- Kako izgleda stablo kada ga nacrtamo (`plot_tree`)
+- Kako svaki „put“ kroz stablo vodi do odluke (klase 0 ili 1)
 
-- **Python 3**
-- **pandas**
-- **numpy**
-- **scikit-learn**
-- **matplotlib**
-- **Jupyter Notebook / VS Code**
+---
+
+## 🛠 Tehnologije
+
+- Python 3  
+- pandas  
+- scikit-learn  
+- matplotlib  
+- Jupyter Notebook / VS Code  
+
+Notebook: **`decision_tree.ipynb`**
 
 ---
 
@@ -55,4 +47,8 @@ Projekat koristi:
 
 ```bash
 git clone https://github.com/MiMica-wow/decision_tree_project.git
+cd decision_tree_project
+
+```bash
+jupyter notebook decision_tree.ipynb
 
