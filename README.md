@@ -49,6 +49,4 @@ Notebook: **`decision_tree.ipynb`**
 git clone https://github.com/MiMica-wow/decision_tree_project.git
 cd decision_tree_project
 
-```bash
-jupyter notebook decision_tree.ipynb
 
